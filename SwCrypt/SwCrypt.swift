@@ -398,7 +398,7 @@ open class PEM {
 		}
 
 		fileprivate static let prefix = "-----BEGIN PRIVATE KEY-----\n"
-		fileprivate static let suffix = "\n-----END PRIVATE KEY-----"
+		fileprivate static let suffix = "\n-----END PRIVATE KEY-----\n"
 		fileprivate static let rsaPrefix = "-----BEGIN RSA PRIVATE KEY-----\n"
 		fileprivate static let rsaSuffix = "\n-----END RSA PRIVATE KEY-----"
 
