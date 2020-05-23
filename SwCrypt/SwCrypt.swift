@@ -394,7 +394,7 @@ open class PEM {
 
 		public static func toPEM(_ derKey: Data) -> String {
 			let base64 = PEM.base64Encode(derKey)
-			return addRSAHeader(base64)
+			return addHeader(base64)
 		}
 
 		fileprivate static let prefix = "-----BEGIN PRIVATE KEY-----\n"
@@ -434,7 +434,7 @@ open class PEM {
 		}
 
 		fileprivate static let pemPrefix = "-----BEGIN PUBLIC KEY-----\n"
-		fileprivate static let pemSuffix = "\n-----END PUBLIC KEY-----"
+		fileprivate static let pemSuffix = "\n-----END PUBLIC KEY-----\n"
 
 		fileprivate static func addHeader(_ base64: String) -> String {
 			return pemPrefix + base64 + pemSuffix
